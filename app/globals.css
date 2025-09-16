@@ -1,0 +1,153 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #f5f3e5; /* cream background */
+  --foreground: #4b5563; /* dark grey text */
+  --card: #ffffff; /* white cards */
+  --card-foreground: #4b5563; /* dark grey card text */
+  --popover: #ffffff; /* white popovers */
+  --popover-foreground: #4b5563; /* dark grey popover text */
+  --primary: #f9c74f; /* soft pastel yellow */
+  --primary-foreground: #4b5563; /* dark grey primary text */
+  --secondary: #e5e0c8; /* light beige */
+  --secondary-foreground: #4b5563; /* dark grey secondary text */
+  --muted: #b5a99d; /* soft taupe */
+  --muted-foreground: #4b5563; /* dark grey muted text */
+  --accent: #f9c74f; /* soft pastel yellow accent */
+  --accent-foreground: #4b5563; /* dark grey accent text */
+  --destructive: #e63946; /* red for destructive actions */
+  --destructive-foreground: #ffffff; /* white destructive text */
+  --border: #d1d5db; /* light grey borders */
+  --input: #ffffff; /* white input backgrounds */
+  --ring: #f9c74f; /* soft pastel yellow ring */
+  --chart-1: #f9c74f; /* soft pastel yellow */
+  --chart-2: #e5e0c8; /* light beige */
+  --chart-3: #b5a99d; /* soft taupe */
+  --chart-4: #ffffff; /* white */
+  --chart-5: #4b5563; /* dark grey */
+  --radius: 0.5rem; /* gentle rounding */
+  --sidebar: #f5f3e5; /* cream sidebar */
+  --sidebar-foreground: #4b5563; /* dark grey sidebar text */
+  --sidebar-primary: #e5e0c8; /* light beige sidebar primary */
+  --sidebar-primary-foreground: #4b5563; /* dark grey sidebar primary text */
+  --sidebar-accent: #f9c74f; /* soft pastel yellow sidebar accent */
+  --sidebar-accent-foreground: #4b5563; /* dark grey sidebar accent text */
+  --sidebar-border: #d1d5db; /* light grey sidebar borders */
+  --sidebar-ring: #f9c74f; /* soft pastel yellow sidebar ring */
+}
+
+.dark {
+  --background: #2d2a24; /* dark cream */
+  --foreground: #f5f3e5; /* light cream text */
+  --card: #3a3630; /* dark card */
+  --card-foreground: #f5f3e5; /* light cream card text */
+  --popover: #3a3630; /* dark popover */
+  --popover-foreground: #f5f3e5; /* light cream popover text */
+  --primary: #f9c74f; /* soft pastel yellow */
+  --primary-foreground: #2d2a24; /* dark cream primary text */
+  --secondary: #4a453d; /* dark beige */
+  --secondary-foreground: #f5f3e5; /* light cream secondary text */
+  --muted: #5a5248; /* dark taupe */
+  --muted-foreground: #b5a99d; /* soft taupe muted text */
+  --accent: #f9c74f; /* soft pastel yellow accent */
+  --accent-foreground: #2d2a24; /* dark cream accent text */
+  --destructive: #e63946; /* red for destructive actions */
+  --destructive-foreground: #ffffff; /* white destructive text */
+  --border: #4a453d; /* dark beige borders */
+  --input: #3a3630; /* dark input backgrounds */
+  --ring: #f9c74f; /* soft pastel yellow ring */
+  --chart-1: #f9c74f; /* soft pastel yellow */
+  --chart-2: #e5e0c8; /* light beige */
+  --chart-3: #b5a99d; /* soft taupe */
+  --chart-4: #ffffff; /* white */
+  --chart-5: #4b5563; /* dark grey */
+  --sidebar: #2d2a24; /* dark cream sidebar */
+  --sidebar-foreground: #f5f3e5; /* light cream sidebar text */
+  --sidebar-primary: #4a453d; /* dark beige sidebar primary */
+  --sidebar-primary-foreground: #f5f3e5; /* light cream sidebar primary text */
+  --sidebar-accent: #f9c74f; /* soft pastel yellow sidebar accent */
+  --sidebar-accent-foreground: #2d2a24; /* dark cream sidebar accent text */
+  --sidebar-border: #4a453d; /* dark beige sidebar borders */
+  --sidebar-ring: #f9c74f; /* soft pastel yellow sidebar ring */
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(249, 199, 79, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(249, 199, 79, 0.6);
+  }
+}
+
+.heartbeat {
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+.pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
