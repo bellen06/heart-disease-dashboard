@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heart Balance</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #dcdcdc;
+      font-family: 'Poppins', sans-serif;
+    }
+    /* Efek 3D natural tanpa warna abu-abu */
+    .nav-3d {
+      background: #fff;
+      border-radius: 50px;
+      box-shadow:
+        inset 2px 2px 4px rgba(255, 255, 255, 0.6),
+        5px 5px 15px rgba(0, 0, 0, 0.1),
+        -5px -5px 15px rgba(255, 255, 255, 0.9);
+      transition: all 0.3s ease;
+    }
+
+    /* Animasi hover elegan pada link navbar */
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: #ef4444; /* Merah lembut */
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-link:hover {
+      color: #ef4444;
+      transform: translateY(-2px);
+    }
+
+    .logo {
+      width: 25%;
+      height: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="relative flex justify-center mt-10">
+    
+    <!-- Logo di luar -->
+    <div class="absolute left-[10%] top-1/2 transform -translate-y-1/2 flex items-center space-x-2">
+      <img src="assets/logo_balance.png" alt="Heart Logo" class="logo">
+    </div>
+
+    <!-- Box 3D natural -->
+    <div class="nav-3d flex justify-center items-center px-10 py-3 w-[700px]">
+      <nav class="flex space-x-8 text-lg text-gray-800">
+        <a href="#" class="nav-link px-3 py-1 rounded-full">About us</a>
+        <a href="heart_check.html" class="nav-link px-3 py-1 rounded-full">My heart check</a>
+        <a href="#" class="nav-link px-3 py-1 rounded-full">Tips & Tricks</a>
+        <a href="#" class="nav-link px-3 py-1 rounded-full">Login / Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner ECG -->
+  <section class="relative mt-10">
+    <img src="assets/banner1.png" alt="ECG Background" class="w-full object-cover opacity-90">
+  </section>
+
+<!-- Research Section -->
+<section class="relative mt-10 mx-auto w-[95%] md:w-[90%] rounded-lg overflow-hidden shadow-lg">
+  <img src="assets/banner2.jpg"
+       alt="Heart research" class="w-full object-cover">
+  
+  <!-- Overlay + Konten -->
+  <div class="absolute inset-0 flex flex-col justify-center pl-8 md:pl-16 bg-black/30">
+    <h3 class="text-5xl font-bold text-white leading-tight drop-shadow-lg">
+      Life-Saving heart<br>research
+    </h3>
+
+    <!-- Tombol sejajar & fit -->
+    <a href="#"
+       class="mt-5 inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white font-semibold rounded-full text-base px-6 py-2 w-fit shadow-md transition-transform duration-200 hover:scale-[1.03]">
+      About us
+    </a>
+  </div>
+
+  <!-- Teks bawah kanan -->
+  <p class="absolute bottom-3 right-4 bg-white/70 text-black font-bold text-sm px-3 py-1 rounded-md shadow-sm">
+    2025 research grants announced.
+  </p>
+</section>
+
+
+</body>
+</html>
